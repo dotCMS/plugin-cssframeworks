@@ -1,0 +1,14 @@
+<servlet>
+    <servlet-name>SassServlet</servlet-name>
+    <servlet-class>com.dotcms.sass.SassServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SassServlet</servlet-name>
+    <url-pattern>*.sass</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>SassServlet</servlet-name>
+    <url-pattern>*.scss</url-pattern>
+</servlet-mapping>

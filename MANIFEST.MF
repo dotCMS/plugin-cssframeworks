@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Plugin-Name: dotCMS sass
+Plugin-Version: 1.0
+Author: Jorge Urdaneta
