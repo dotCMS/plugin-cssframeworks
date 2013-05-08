@@ -70,7 +70,7 @@ public class SassServlet extends HttpServlet {
 	                            this.getServletContext().getRealPath("WEB-INF/jruby-libs"), 
 	                            this.getServletContext().getRealPath("WEB-INF/sass-gem/lib"));
 	                    lastMod = new HashMap<String, Object>();
-	                    lastMod.put("DATE", vi.getVersionTs());
+	                    lastMod.put("DATE", new Date());
 	                    lastMod.put("CSS", css);
 	                    lastModifiedMap.put(ident.getInode(), lastMod);
 	                }
