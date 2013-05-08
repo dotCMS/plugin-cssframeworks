@@ -58,7 +58,7 @@ public class SassServlet extends HttpServlet {
             	HashMap<String, Object> lastMod = lastModifiedMap.get(ident.getInode());
             	
             	// if we have a file that has been modified
-            	if(lastMod ==null || ((Date) lastMod.get("DATE")).after(vi.getVersionTs())){
+            	if(lastMod ==null || ((Date) lastMod.get("DATE")).before(vi.getVersionTs())){
 	                Contentlet cont = contAPI.findContentletByIdentifier(
 	                        ident.getId(), true, defLangId, user, true);
 	                if(cont!=null && InodeUtils.isSet(cont.getInode())) {
@@ -74,6 +74,9 @@ public class SassServlet extends HttpServlet {
 	                    lastMod.put("CSS", css);
 	                    lastModifiedMap.put(ident.getInode(), lastMod);
 	                }
+            	}
+            	else if(lastMod !=null && ((Date) lastMod.get("DATE")).after(vi.getVersionTs())){
+            		css = (String) lastMod.get("CSS");
             	}
             }
         }
