@@ -1,8 +1,6 @@
 Sass Plugin for dotCMS
 ======================
 
-** THIS IS AN EXPERIMENTAL UNRELEASED PLUGIN. USE ONLY IN STAGGING ENVIRONMENTS **
-
 Using jRuby this plugin replaces the normal asset downloading for
 extensions .sass and .scss with the output of the Sass parser.
 It uses an unmodified version of sass gem 3.2.7 on 1.9 jRuby runtime.
